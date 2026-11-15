@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ell Kuliner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/aset/icon.png">
+</head>
+<body>
+
+    <!-- NAVBAR MINIMALIS -->
+    <header class="navbar_utama">
+        <div class="container_nav">
+            <div class="logo">
+                <img src="images/aset/icon.png" alt="icon">
+                <a href="#beranda" class="logo_brand">Ell<span>Kuliner.</span></a>
+            </div>
+            
+            <nav class="menu_navigasi" id="menu_navigasi">
+                <a href="#beranda">Beranda</a>
+                <a href="#katalog">Katalog</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+
+            <div class="aksi_navbar">
+                <button class="tombol_ikon" id="tombol_keranjang" title="Keranjang">
+                    🛒 <span class="badge_keranjang" id="jumlah_keranjang">0</span>
+                </button>
+                <button class="tombol_ikon" id="tombol_tema" title="Ganti Tema">☀️</button>
+                <button class="tombol_hamburger" id="tombol_hamburger">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION ALA REFERENSI JOBSHEET -->
+    <section id="beranda" class="hero_section">
+        <div class="container_utama hero_grid">
+            <div class="hero_teks">
+                <span class="sapaan_waktu" id="sapaan_waktu">Selamat Pagi!</span>
+                <h1>Bukan Sekedar Camilan, Ini <span>Cita Rasa Lokal.</span></h1>
+                <p>Kurasi oleh-oleh tradisional terbaik dari pengrajin UMKM Klaten. Diproduksi segar setiap hari tanpa bahan pengawet.</p>
+                <div class="hero_aksi">
+                    <a href="#katalog" class="tombol_primer">Jelajahi Menu</a>
+                    <a href="#kontak" class="tombol_sekunder">Mitra Reseller</a>
+                </div>
+            </div>
+            <div class="hero_gambar">
+                <div class="lingkaran_dekorasi"></div>
+                <img src="images/aset/main-katalogg.png" alt="Produk Unggulan UMKM">
+                <div class="kartu_mengambang">
+                    <strong>100% Lokal</strong>
+                    <span>Bahan Alami Pilihan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK MODERN -->
+    <section id="katalog" class="section_konten">
+        <div class="container_utama">
+            <div class="header_section">
+                <span class="sub_judul">PILIHAN TERBAIK</span>
+                <h2 class="judul_section">Katalog Produk UMKM</h2>
+            </div>
+
+            <!-- Pencarian & Filter Kategori -->
+            <div class="kontrol_katalog">
+                <div class="kotak_cari">
+                    <span>🔎</span>
+                    <input type="text" id="input_cari" class="input_pencarian" placeholder="Cari peyek, getuk, sambel...">
+                </div>
+                
+                <div class="grup_kategori">
+                    <button class="tombol_kategori aktif" data-kategori="semua">Semua</button>
+                    <button class="tombol_kategori" data-kategori="gurih">Camilan Gurih</button>
+                    <button class="tombol_kategori" data-kategori="manis">Jajanan Manis</button>
+                    <button class="tombol_kategori" data-kategori="bumbu">Bumbu & Sambal</button>
+                </div>
+            </div>
+
+            <!-- Grid Kartu Produk Minimalis -->
+            <div class="grid_produk" id="daftar_produk">
+                <div class="kartu_produk" data-kategori="gurih" data-nama="Peyek Cetul Khas Cokro" data-harga="15000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/peyek-cethul.jpg" alt="Peyek Cetul">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Camilan Gurih</span>
+                        <h3>Peyek Cetul Cokro</h3>
+                        <p>Rempeyek renyah dengan ikan cetul segar mata air Cokro.</p>
+                        <span class="harga_produk">Rp 15.000</span>
+                    </div>
+                </div>
+
+                <div class="kartu_produk" data-kategori="bumbu" data-nama="Sambel Pecel Sangrai" data-harga="18000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/sambal-pecel-sangrai.jpg" alt="Sambel Pecel">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Bumbu & Sambal</span>
+                        <h3>Sambel Pecel Sangrai</h3>
+                        <p>Bumbu kacang sangrai non-minyak beraroma daun jeruk.</p>
+                        <span class="harga_produk">Rp 18.000</span>
+                    </div>
+                </div>
+
+                <div class="kartu_produk" data-kategori="manis" data-nama="Getuk Lindri Klaten" data-harga="12000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/getuk.png" alt="Getuk Klaten">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Jajanan Manis</span>
+                        <h3>Getuk Lindri Klaten</h3>
+                        <p>Olahan singkong lembut dengan taburan kelapa parut gurih.</p>
+                        <span class="harga_produk">Rp 12.000</span>
+                    </div>
+                </div>
+
+                <div class="kartu_produk" data-kategori="manis" data-nama="Jenang Krasikan" data-harga="20000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/jenang-krasikan.jpg" alt="Jenang">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Jajanan Manis</span>
+                        <h3>Jenang Krasikan</h3>
+                        <p>Perpaduan beras ketan, gula kelapa asli, dan santan kental.</p>
+                        <span class="harga_produk">Rp 20.000</span>
+                    </div>
+                </div>
+
+                <div class="kartu_produk" data-kategori="manis" data-nama="Wajik Ketan Gula Jawa" data-harga="17000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/wajik-gula-merah.jpg" alt="Wajik">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Jajanan Manis</span>
+                        <h3>Wajik Ketan Gula Jawa</h3>
+                        <p>Kue ketan manis alami dengan aroma daun pandan wangi.</p>
+                        <span class="harga_produk">Rp 17.000</span>
+                    </div>
+                </div>
+
+                <div class="kartu_produk" data-kategori="gurih" data-nama="Kripik Tempe Daun Jeruk" data-harga="14000">
+                    <div class="wadah_foto_produk">
+                        <img src="images/kuliner/kripik-tempe.jpg" alt="Kripik Tempe">
+                        <button class="tombol_beli" title="Tambah ke Keranjang">+</button>
+                    </div>
+                    <div class="info_produk">
+                        <span class="label_kategori">Camilan Gurih</span>
+                        <h3>Kripik Tempe Renyah</h3>
+                        <p>Irisan tempe kedelai murni goreng garing bumbu ketumbar.</p>
+                        <span class="harga_produk">Rp 14.000</span>
+                    </div>
+                </div>
+            </div>
+            <p id="pesan_kosong" class="pesan_tidak_ditemukan" style="display: none;">Produk yang kamu cari tidak ditemukan.</p>
+        </div>
+    </section>
+
+    <!-- TENTANG & GALERI -->
+    <section id="tentang" class="section_konten bg_sekunder">
+        <div class="container_utama">
+            <div class="header_section">
+                <span class="sub_judul">CERITA KAMI</span>
+                <h2 class="judul_section">Memberdayakan Pengrajin Lokal</h2>
+                <p class="deskripsi_tengah">
+                    Sejak 2020, <strong>Ell Kuliner</strong> menjembatani dapur-dapur UMKM tradisional di Kabupaten Klaten agar menjangkau pasar modern dengan standar kemasan higienis.
+                </p>
+            </div>
+
+            <div id="galeri" class="grid_galeri">
+                <img src="images/aset/dapur.jpg" alt="Dapur Produksi Higienis" class="foto_galeri">
+                <img src="images/aset/pameran-kuliner.jpg" alt="Partisipasi Bazar UMKM Lokal" class="foto_galeri">
+                <img src="images/aset/kemasan-modern.jpg" alt="Pengemasan Modern" class="foto_galeri">
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq" class="section_konten">
+        <div class="container_utama">
+            <div class="header_section">
+                <span class="sub_judul">BANTUAN</span>
+                <h2 class="judul_section">Pertanyaan Umum</h2>
+            </div>
+            <div class="wadah_faq">
+                <div class="item_faq">
+                    <button class="pertanyaan_faq">Berapa lama daya tahan produk makanan? <span>+</span></button>
+                    <div class="jawaban_faq">
+                        <p>Produk kering tahan hingga 1 bulan dalam kemasan tertutup. Jajanan basah seperti Getuk tahan 2–3 hari di suhu ruang.</p>
+                    </div>
+                </div>
+                <div class="item_faq">
+                    <button class="pertanyaan_faq">Apakah melayani pengiriman luar kota? <span>+</span></button>
+                    <div class="jawaban_faq">
+                        <p>Ya, pengiriman tersedia ke seluruh Indonesia menggunakan kardus tebal dan bubble wrap gratis.</p>
+                    </div>
+                </div>
+                <div class="item_faq">
+                    <button class="pertanyaan_faq">Bagaimana cara menjadi reseller? <span>+</span></button>
+                    <div class="jawaban_faq">
+                        <p>Silakan kirim pesan melalui formulir kontak di bawah untuk mendapatkan katalog harga grosir (diskon hingga 15%).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section_konten bg_sekunder">
+        <div class="container_utama grid_kontak">
+            <div class="info_kontak">
+                <span class="sub_judul">HUBUNGI KAMI</span>
+                <h2 class="judul_section_kiri">Mari Bekerja Sama</h2>
+                <p>Punya pertanyaan seputar pesanan partai besar atau kemitraan UMKM? Tim kami siap membantu.</p>
+                <div class="detail_kontak">
+                    <p>📍 Gosutan, Kranggan, Manisrenggo, Klaten</p>
+                    <p>📞 0851-5168-6157</p>
+                    <p>✉️ halo@EllKuliner.id</p>
+                </div>
+            </div>
+
+            <form id="form_kontak" class="formulir_kontak">
+                <div class="grup_input">
+                    <input type="text" id="nama" placeholder="Nama Lengkap">
+                </div>
+                <div class="grup_input">
+                    <input type="email" id="email" placeholder="Alamat Email">
+                </div>
+                <div class="grup_input">
+                    <textarea id="pesan" rows="4" placeholder="Tulis pesan atau detail pesanan Anda..."></textarea>
+                </div>
+                <button type="submit" class="tombol_primer lebar_penuh">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer_utama">
+        <div class="container_utama">
+            <p>&copy; 2026 <strong>EllKuliner.</strong></p>
+        </div>
+    </footer>
+
+    <!-- TOMBOL KEMBALI KE ATAS -->
+    <button id="tombol_atas" class="tombol_kembali_atas" title="Kembali ke Atas">↑</button>
+
+    <!-- MODAL GALERI -->
+    <div id="modal_galeri" class="modal_overlay">
+        <div class="konten_modal_gambar">
+            <span class="tutup_modal" id="tutup_modal_galeri">&times;</span>
+            <img id="gambar_modal_besar" src="" alt="Perbesar Gambar">
+            <p id="keterangan_modal_gambar"></p>
+        </div>
+    </div>
+
+    <!-- MODAL KERANJANG -->
+    <div id="modal_keranjang" class="modal_overlay">
+        <div class="konten_modal_keranjang">
+            <div class="header_modal">
+                <h3>Keranjang Belanja</h3>
+                <span class="tutup_modal" id="tutup_modal_keranjang">&times;</span>
+            </div>
+            <ul id="daftar_item_keranjang" class="list_keranjang"></ul>
+            <div class="footer_keranjang">
+                <div>
+                    <small>Total Estimasi</small>
+                    <strong id="total_harga_keranjang">Rp 0</strong>
+                </div>
+                <button id="tombol_checkout" class="tombol_primer">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
